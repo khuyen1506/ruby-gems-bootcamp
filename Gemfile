@@ -58,3 +58,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # them bootstrap
 gem 'bootstrap', '~> 5.2.0' 
 gem 'jquery-rails'
+
+# them fontawesome/ da co node module nen ko can gem
+# gem 'font-awesome-sass'
