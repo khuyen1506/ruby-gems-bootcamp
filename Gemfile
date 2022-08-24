@@ -61,3 +61,9 @@ gem 'jquery-rails'
 
 # them fontawesome/ da co node module nen ko can gem
 # gem 'font-awesome-sass'
+
+# them haml
+gem "haml-rails", "~> 2.0"
+
+# them simple form
+gem 'simple_form'
