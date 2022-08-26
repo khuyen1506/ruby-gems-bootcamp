@@ -67,3 +67,7 @@ gem "haml-rails", "~> 2.0"
 
 # them simple form
 gem 'simple_form'
+#  them nhap du lieu fake
+gem 'faker'
+#  them cai dat authen khi log in
+gem "devise", "~> 4.1"
