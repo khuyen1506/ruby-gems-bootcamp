@@ -1,0 +1,64 @@
+.container
+  .jumbotron 
+    .display-4 
+      What do you want to learn today?
+
+    .p-4 
+      .form-inline.my-2.my-lg-0
+        = form_tag(courses_path, method: :get) do
+          .input-group
+            = text_field_tag :title, params[:title], autocomplete: 'off', placeholder: "Search", class: 'form-control-sm'
+            %span.input-group-append
+              %button.btn.btn-primary.btn-sm.btn-gem{:type => "submit"}
+                %span.fa.fa-search{"aria-hidden" => "true"}
+  .card-group
+    .card.card-body
+      %h1
+        .fa.fa-graduation-cap
+      = Course.count
+      online courses
+      .row
+      Explore a variety of fresh topics
+    .card.card-body
+      %h1
+        .fa.fa-chalkboard-teacher
+        /.fa.fa-brain
+      = Course.distinct.count(:user_id)
+      expert instructors
+      .row
+      Find the right instructor for you
+    .card.card-body
+      %h1
+        .fa.fa-user-graduate
+      = User.count
+      active learners
+      .row
+      Join the knowledge sharing community
+    .card.card-body
+      %h1
+        .fa.fa-infinity
+      Lifetime access
+      .row
+      Learn on your schedule
+
+  %hr
+  %h2 
+    Popular courses  
+  .row.row-cols-1.row-cols-md-3.g-4
+    - @course.each do |course|
+      = render 'courses/course', course: course
+  %hr
+  %h2  
+    Top rated Courses
+  .row.row-cols-1.row-cols-md-3.g-4
+    - @course.each do |course|
+      = render 'courses/course', course: course
+  %hr
+  %h2
+    Latest courses
+  .row.row-cols-1.row-cols-md-3.g-4
+    - @latest_course.each do |course|
+      = render 'courses/course', course: course
+  
+  
+  

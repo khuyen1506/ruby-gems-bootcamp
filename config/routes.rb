@@ -2,8 +2,10 @@ Rails.application.routes.draw do
  
   devise_for :users
   resources :courses
+
   root 'home#index'
   get 'home/index'
+  get 'course/index'
 
   get 'static_page/landing_page'
   get 'privacy_policy', to:'static_page#privacy_policy'
