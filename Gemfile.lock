@@ -154,6 +154,7 @@ GEM
     nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pg (1.4.3)
     popper_js (2.11.5)
     pry (0.14.1)
       coderay (~> 1.1)
@@ -284,6 +285,7 @@ DEPENDENCIES
   letter_opener_web
   listen (~> 3.3)
   mysql2 (~> 0.5)
+  pg
   pry
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
