@@ -6,9 +6,9 @@ class CoursesController < ApplicationController
    
     if params[:title]
 
-      @course = Course.where('title LIKE ?', "%#{params[:title]}%")
+      @courses = Course.where('title LIKE ?', "%#{params[:title]}%")
     else
-      @course = Course.all
+      @courses = Course.all
     end
 
   end
