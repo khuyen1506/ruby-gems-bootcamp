@@ -10,12 +10,23 @@
 #   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
 #
 default: &default
-  adapter: mysql2
-  encoding: utf8mb4
+
+# Note: Db mysql 
+# ----------
+#   adapter: mysql2
+#   encoding: utf8mb4
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#   username: root
+#   password: 12345678
+#   socket: /var/run/mysqld/mysqld.sock
+  
+#  Db postgresql tren sever heroku
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password: 12345678
-  socket: /var/run/mysqld/mysqld.sock
+
 
 development:
   <<: *default
@@ -48,6 +59,7 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+  
 production:
   <<: *default
   database: ruby_gem_bootcamp_production

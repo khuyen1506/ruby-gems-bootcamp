@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
 end
 
 group :development do
@@ -42,6 +43,8 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  # Them gem de khi cornfim email tu chay ra tab
+  gem 'letter_opener_web'
 end
 
 group :test do
@@ -58,3 +61,18 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # them bootstrap
 gem 'bootstrap', '~> 5.2.0' 
 gem 'jquery-rails'
+
+# them fontawesome/ da co node module nen ko can gem
+# gem 'font-awesome-sass'
+
+# them haml
+gem "haml-rails", "~> 2.0"
+
+# them simple form
+gem 'simple_form'
+#  them nhap du lieu fake
+gem 'faker'
+#  them cai dat authen khi log in
+gem "devise", "~> 4.1"
+# them gem frendly id EX: de khi show 1 khoa hoc se show title chu khong phai la ma id
+gem 'friendly_id', '~> 5.4.0'
