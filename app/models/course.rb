@@ -3,7 +3,7 @@ class Course < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  validates :title,  presence: true
+  validates :title, :short_description, :language, :level, :price,  presence: true
   validates :description, presence: true, length: { :minimum => 5 }
 
   # tao moi quan he 1 course co nhieu user
