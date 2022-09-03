@@ -12,13 +12,14 @@
       %i.fa-solid.fa-layer-group
       = course.level
       = number_to_currency(course.price) 
-    .card-footer
-      .far.fa-clock
-      = course.created_at.strftime('%d-%b-%Y')
-      .row
-      .fa.fa-chalkboard-teacher
-      = course.user 
-      
+    .card-footer.card-display
+      %div
+        %i.fa-regular.fa-clock
+        = course.created_at.strftime('%d-%b-%Y')
+      %div 
+        %i.fa-solid.fa-chalkboard-user
+        = course.user.username  
+        
     .card-footer
       = link_to 'Show', course, class: 'btn btn-sm btn-primary'
       = link_to 'Edit', edit_course_path(course), class: 'btn btn-sm btn-warning'

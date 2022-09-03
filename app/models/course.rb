@@ -13,7 +13,19 @@ class Course < ApplicationRecord
     title
   end
 
+  LANGUAGES = [:"English",:"Polish",:"Russian"]
+  def self.languages
+    LANGUAGES.map { |language| [language, language]}
+  end
+
+  LEVELS = [:"Beginner",:"Imediate",:"Advanced"]
+  def self.levels
+    LEVELS.map { |level|[level, level]}
+  end 
   # tao form rich text action
   has_rich_text :description
 
+  #  them gem public 
+  include PublicActivity::Model
+  tracked owner: Proc.new{|controller, model| controller.current_user}
 end

@@ -79,3 +79,10 @@ gem 'faker'
 gem "devise", "~> 4.1"
 # them gem frendly id EX: de khi show 1 khoa hoc se show title chu khong phai la ma id
 gem 'friendly_id', '~> 5.4.0'
+# them gem ransack cho search and filter data
+gem 'ransack'
+# them gem public cho 
+gem 'public_activity'
+
+gem "rolify"
+
