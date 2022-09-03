@@ -28,4 +28,7 @@
       .btn.btn-success Yes
     - else
       .btn.btn-danger No
-
+  .card-footer
+    - user.roles.each do |role|
+      .badge.text-bg-info
+        = role.name
